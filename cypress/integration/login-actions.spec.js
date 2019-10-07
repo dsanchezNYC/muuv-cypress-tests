@@ -6,9 +6,13 @@ describe('Login actions', () => {
     
 const loginPage = new LoginPage
 
-it('Should see login page load correctly', () => {
+beforeEach(() => {
     loginPage.navigate()
-    loginPage.muuvLogoExists()
+})
+
+it('Should see login page load correctly', () => {
+    loginPage.muuvLogoVisible()
+    loginPage.muuvSignUpVisible()
     loginPage.loginFieldExists()
     loginPage.passwordFieldExists()
 })
