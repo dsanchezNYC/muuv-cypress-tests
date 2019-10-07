@@ -4,6 +4,10 @@ export class LoginPage {
         cy.visit('https://muuv.herokuapp.com/#/login')
     }
 
+    muuvLogoExists(){
+        cy.get('h1').should('be.visible')    
+    }
+
     loginFieldExists(){
         cy.get('[type="text"]').should('be.enabled')
     }
