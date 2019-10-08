@@ -7,7 +7,7 @@ describe('Login page smoke tests', () => {
 const loginPage = new LoginPage
 
 beforeEach(() => {
-    loginPage.navigate()
+    loginPage.navigateToLoginPage()
 })
 
 it('Should see Muuv logo load correctly', () => {

@@ -1,6 +1,6 @@
 export class LoginPage {
     
-    navigate(){
+    navigateToLoginPage(){
         cy.visit('https://muuv.herokuapp.com/#/login')
     }
 
@@ -10,6 +10,11 @@ export class LoginPage {
 
     muuvSignUpVisible(){
         cy.get('.login-signup').should('be.visible')
+    }
+
+    navigateToSignUp(){
+        //cy.get('.login-signup').should('be.visible')
+        cy.get('.login-signup').click()
     }
 
     loginFieldExists(){
