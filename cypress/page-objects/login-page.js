@@ -19,5 +19,20 @@ export class LoginPage {
     passwordFieldExists(){
         cy.get('[type="password"]').should('be.enabled')
     }
+
+    loginButtonExists(){
+        cy.get('.login-submit-button').should('be.visible')
+    }
+
+    demoLoginLinkExists(){
+        cy.get('.demo-button').should('be.visible')
+    }
+
+    backgroundImageVisible(){
+        cy.get('.everypage').should('be.visible')    
+    }
+    
+
+    
     
 }
