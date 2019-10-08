@@ -1,0 +1,23 @@
+version: 2.1
+
+orbs:
+  # "cypress-io/cypress@1" installs the latest published
+  # version "1.x.y" of the orb. We recommend you then use
+  # the strict explicit version "cypress-io/cypress@1.x.y"
+  # to lock the version and prevent unexpected CI changes
+  cypress: cypress-io/cypress@1.8.0
+
+workflows:
+  build:
+    jobs:
+      - cypress/run # "run" job comes from "cypress" orb
+  nightly: 
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - cypress/run # "run" job comes from "cypress" orb
