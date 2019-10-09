@@ -13,7 +13,6 @@ export class LoginPage {
     }
 
     navigateToSignUp(){
-        //cy.get('.login-signup').should('be.visible')
         cy.get('.login-signup').click()
     }
 
