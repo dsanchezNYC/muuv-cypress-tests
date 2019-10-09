@@ -28,9 +28,4 @@ describe('Sign Up page smoke tests', () => {
         signUpPage.clickShowPasswordLink()
         signUpPage.hidePasswordLinkVisible()
     })
-
-
-    
-    
-
 })
