@@ -10,7 +10,8 @@ orbs:
 workflows:
   build:
     jobs:
-      - cypress/run # "run" job comes from "cypress" orb
+      - cypress/run: # "run" job comes from "cypress" orb
+          browser: chrome
       
   nightly: 
     triggers:
