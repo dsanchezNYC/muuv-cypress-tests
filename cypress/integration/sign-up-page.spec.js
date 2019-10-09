@@ -8,11 +8,7 @@ describe('Sign Up page smoke tests', () => {
     const loginPage = new LoginPage
     const signUpPage = new SignUpPage
 
-    beforeEach(() => {
-        loginPage.navigateToLoginPage()
-        loginPage.muuvSignUpVisible()
-        loginPage.navigateToSignUp()
-    })
+
 
     it('Should see Sign Up title and description correctly', () => {
         signUpPage.titleSignUpVisible()
