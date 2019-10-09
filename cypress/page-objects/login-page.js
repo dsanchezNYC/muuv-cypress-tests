@@ -33,11 +33,12 @@ export class LoginPage {
         cy.get('.demo-button').should('be.visible')
     }
 
+    loginToMuuvDemoLogin(){
+        cy.get('.demo-button').click()
+    }
+
     backgroundImageVisible(){
         cy.get('.everypage').should('be.visible')    
     }
-    
-
-    
     
 }

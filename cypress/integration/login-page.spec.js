@@ -1,10 +1,12 @@
 /// <reference types="cypress" />
 
 import { LoginPage } from "../page-objects/login-page"
+import { WorkoutsPage } from "../page-objects/workouts-page"
 
 describe('Login page smoke tests', () => {
     
 const loginPage = new LoginPage
+const workoutsPage = new WorkoutsPage
 
 beforeEach(() => {
     loginPage.navigateToLoginPage()
@@ -33,6 +35,11 @@ it('Should see Demo Login? load correctly', () => {
 
 it('Should see background image correctly', () => {
     loginPage.backgroundImageVisible()
+})
+
+it('Should login via Demo Login', () => {
+    loginPage.loginToMuuvDemoLogin()
+    workoutsPage.activityFeedVisible()
 })
 
 })
