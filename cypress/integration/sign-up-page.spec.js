@@ -10,6 +10,7 @@ describe('Sign Up page smoke tests', () => {
 
     beforeEach(() => {
         loginPage.navigateToLoginPage()
+        loginPage.muuvSignUpVisible()
         loginPage.navigateToSignUp()
     })
 
