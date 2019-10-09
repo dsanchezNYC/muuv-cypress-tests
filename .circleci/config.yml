@@ -11,8 +11,8 @@ workflows:
   build:
     jobs:
       - cypress/run # "run" job comes from "cypress" orb
-    store_test_results:
-      path: test-results
+      - store_test_results:
+          path: test-results
       
   nightly: 
     triggers:
@@ -24,6 +24,5 @@ workflows:
                 - master
     jobs:
       - cypress/run # "run" job comes from "cypress" orb
-
-    store_test_results:
-      path: test-results
+      - store_test_results:
+          path: test-results
