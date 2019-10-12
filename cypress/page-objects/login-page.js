@@ -1,43 +1,41 @@
 export class LoginPage {
     
-    navigateToLoginPage(){
+    visitLoginPage(){
+        cy.clearCookie('session-id')
         cy.visit('https://muuv.herokuapp.com/#/login')
+        cy.viewport(1440,900)
     }
 
-    muuvLogoVisible(){
-        cy.get('h1').should('be.visible')    
+    muuvHeaderLogo(){
+        return cy.get('h1')
     }
 
-    muuvSignUpVisible(){
-        cy.get('.login-signup').should('be.visible')
+    signUpButton(){
+        return cy.get('.login-signup')
     }
 
-    navigateToSignUp(){
-        cy.get('.login-signup').click()
+    emailLoginField(){
+        return cy.get('[type="text"]')
     }
 
-    loginFieldExists(){
-        cy.get('[type="text"]').should('be.enabled')
+    passwordLoginField(){
+        return cy.get('[type="password"]')
     }
 
-    passwordFieldExists(){
-        cy.get('[type="password"]').should('be.enabled')
+    logInButton(){
+        return cy.get('.login-submit-button')
     }
 
-    loginButtonExists(){
-        cy.get('.login-submit-button').should('be.visible')
+    demoLoginLink(){
+        return cy.get('.demo-button')
     }
 
-    demoLoginLinkExists(){
-        cy.get('.demo-button').should('be.visible')
+    backgroundImage(){
+        return cy.get('.everypage')
     }
 
-    loginToMuuvDemoLogin(){
-        cy.get('.demo-button').click()
-    }
-
-    backgroundImageVisible(){
-        cy.get('.everypage').should('be.visible')    
+    getEmailPasswordError(){
+        return cy.get('.login-error')
     }
     
 }

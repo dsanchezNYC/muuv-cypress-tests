@@ -1,31 +1,35 @@
 export class SignUpPage{
 
-    titleSignUpVisible(){
-        cy.get('.signup-form-title').should('be.visible')
+    signUpTitle(){
+        return cy.get('.signup-form-title')
     }
 
-    descriptionSignUpVisible(){
-        cy.get('.signup-description').should('be.visible')
+    signUpDescription(){
+        return cy.get('.signup-description')
     }
 
-    emailTextLogin(){
-        cy.get('.signup-form > :nth-child(2)').should('be.visible')
+    emailSignUpFieldText(){
+        return cy.get('.signup-form > :nth-child(2)')
     }
 
-    newPasswordTextLogin(){
-        cy.get('.password-show-hide').should('be.visible')
+    emailSignUpField(){
+        return cy.get('.signup-form > [type="text"]')
     }
 
-    showPasswordLinkVisible(){
-        cy.get('.password').should('be.visible')
+    passwordSignUpFieldText(){
+        return cy.get('.password-show-hide')
     }
 
-    clickShowPasswordLink(){
-        cy.get('.password').click()
+    passwordSignUpField(){
+        return cy.get('.signup-form > [type="password"]')
     }
 
-    hidePasswordLinkVisible(){
-        cy.get('.text').should('be.visible')
+    showPasswordLink(){
+        return cy.get('.password')
+    }
+
+    hidePasswordLink(){
+        return cy.get('.text')
     }
     
 }
