@@ -1,9 +1,9 @@
 export class LoginPage {
     
     visitLoginPage(){
-        cy.clearCookie('session-id')
-        cy.visit('https://muuv.herokuapp.com/#/login')
         cy.viewport(1440,900)
+        cy.visit('https://muuv.herokuapp.com/#/login')        
+        cy.clearCookie('session-id')
     }
 
     muuvHeaderLogo(){
