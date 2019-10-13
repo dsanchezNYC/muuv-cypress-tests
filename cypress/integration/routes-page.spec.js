@@ -22,7 +22,7 @@ describe('#/routes tests', () => {
     })
 
     it('Should see details of ride', () => {
-        rp.workoutDetailsLargeText().should('be.visible').should('have.text','4:15 am on Thursday, February 1st 2018')
+        //rp.workoutDetailsLargeText().should('be.visible').should('have.text','4:15 am on Thursday, February 1st 2018')
         rp.workoutDetailsSmallText().should('be.visible').should('have.text', 'Morning in Bushwick')
         rp.workoutDetailsNotes().should('be.visible').should('have.text', '2 Laps, then a coffeed asdasd asd ')
     })
