@@ -12,4 +12,8 @@ export class WorkoutsPage{
         return cy.get('.logged-in-dropdown').click(value)
     }
 
+    routeImage(){
+        return cy.get('.wrk-route-img')
+    }
+
 }

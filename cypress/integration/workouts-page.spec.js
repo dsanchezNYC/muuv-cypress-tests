@@ -14,8 +14,17 @@ describe('#/workouts page tests', () => {
         lp.demoLoginLink().click()
     })
 
+    describe('Smoke tests', () =>{
+
+
     it('Should see Activity Feed header', () => {
         wop.activityFeed().should('be.visible')
+    })
+
+    it('Should see Route Image dsplayed', () => {
+        wop.routeImage().should('be.visible')
+    })
+
     })
 
 })
