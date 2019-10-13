@@ -10,8 +10,7 @@ describe('#/workouts page tests', () => {
     const wop = new WorkoutsPage
 
     beforeEach(() => {
-        lp.visitLoginPage()
-        lp.demoLoginLink().click()
+        lp.loginAsDemoUser()
     })
 
     describe('Smoke tests', () =>{

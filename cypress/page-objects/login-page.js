@@ -3,7 +3,13 @@ export class LoginPage {
     visitLoginPage(){
         cy.viewport(1440,900)
         cy.visit('https://muuv.herokuapp.com/#/login')        
-        cy.clearCookie('session-id')
+    }
+
+    loginAsDemoUser(){
+        cy.viewport(1440,900)
+        cy.visit('https://muuv.herokuapp.com/#/login')        
+        cy.get('.demo-button', {timeout: 3000}).click()
+        cy.clearCookies()
     }
 
     muuvHeaderLogo(){
@@ -37,5 +43,6 @@ export class LoginPage {
     getEmailPasswordError(){
         return cy.get('.login-error')
     }
+
     
 }
