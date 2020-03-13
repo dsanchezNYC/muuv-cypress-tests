@@ -10,25 +10,48 @@ describe('#/routes tests', () => {
     const wop = new WorkoutsPage
     const rp = new RoutesPage
 
-    beforeEach(() => {
+    // beforeEach(() => {
+    //     lp.loginAsDemoUser()
+    //     wop.routeImage().click()
+    // })
+
+    describe('Sanity tests', () => {
+
+    it('Header visible, correct user', () => {
         lp.loginAsDemoUser()
         wop.routeImage().click()
-    })
-
-    describe('Smoke tests', () => {
-
-    it('Should see Workout Header', () => {
         rp.workoutHeader().should('be.visible').should('have.text', 'BricePowell - Ride')
     })
 
-    it('Should see details of ride', () => {
-        //rp.workoutDetailsLargeText().should('be.visible').should('have.text','4:15 am on Thursday, February 1st 2018')
-        rp.workoutDetailsSmallText().should('be.visible').should('have.text', 'Morning in Bushwick')
-        rp.workoutDetailsNotes().should('be.visible').should('have.text', '2 Laps, then a coffeed asdasd asd ')
+    it('Profile Pic visible', () => {
+        rp.profilePic().should('be.visible')
     })
 
+    it('Details/notes of ride visible', () => {
+        rp.workoutDetailsH2().should('be.visible').should('have.text','4:15 am on Thursday, February 1st 2018')
+        rp.workoutDetailsH1().should('be.visible').should('have.text', 'Morning in Bushwick')
+        rp.workoutDetailsP().should('be.visible').should('have.text', '2 Laps, then a coffeed asdasd asd ')
+        rp.workoutTitle().should('be.visible').should('have.text', 'Bushwick Walk Around')
+    })
 
+    it('Distance and label visible', () => {
+      rp.distanceLabel().should('be.visible')
+      rp.distanceValue().should('be.visible')  
+    })
 
+    it('Moving time and label visible', () =>{
+        rp.movingTimeLabel().should('be.visible')
+        rp.movingTimeValue().should('be.visible')
+    })
+
+    it('Map visible', () => {
+        rp.workoutImage().should('be.visible')    
+    })
+
+    it('Graph visible', () => {
+        rp.graph().should('be.visible')
+        rp.graphArea().should('be.visible')
+    })
     
     })
 

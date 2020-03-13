@@ -10,40 +10,41 @@ describe('#/login tests', () => {
     const wop = new WorkoutsPage
     const sup = new SignUpPage
 
-    beforeEach(() => {
+    describe('Sanity tests', () =>{
+
+    it('Muuv logo visible', () => {
         lp.visitLoginPage()
-    })
-
-    describe('Smoke tests', () =>{
-
-    it('Should see Muuv logo load correctly', () => {
         lp.muuvHeaderLogo().should('be.visible')
     })
 
-    it('Should see Sign Up button load correctly', () => {
+    it('Sign Up button visible', () => {
         lp.signUpButton().should('be.visible')
     })
 
-    it('Should see Login and Password fields correctly', () => {
+    it('Login and Password fields visible', () => {
         lp.emailLoginField().should('be.visible').should('be.enabled')
         lp.passwordLoginField().should('be.visible').should('be.enabled')
     })
 
-    it('Should see Log In button load correctly', () => {
+    it('Log In button visible', () => {
         lp.logInButton().should('be.visible')
     })
 
-    it('Should see Demo Login? load correctly', () => {
+    it('Demo Login? link visible', () => {
         lp.demoLoginLink().should('be.visible')
     })
 
-    it('Should see background image correctly', () => {
+    it('Background image visible', () => {
         lp.backgroundImage().should('be.visible')
     })
     
     })
 
-    describe('Functional tests', () =>{
+    describe('Login tests', () =>{
+
+    beforeEach(() => {
+        lp.visitLoginPage()
+    })
 
     it('Should see email/password error when no email/password provided', () => {
         lp.logInButton().should('be.visible').click()

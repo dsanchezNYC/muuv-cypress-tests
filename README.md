@@ -2,6 +2,6 @@
 
 # muuv-cypress-tests
 
-More fun with Cypress, specifically for friend's Muuv app. 
+Cypress tests for Muuv app (created for a bootcamp by a friend).
 
 See app: https://github.com/bpowell15/muuv
