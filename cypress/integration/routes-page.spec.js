@@ -29,6 +29,7 @@ describe('#/routes tests', () => {
 
     it('Details/notes of ride visible', () => {
         //rp.workoutDetailsH2().should('be.visible').should('have.text','4:15 am on Thursday, February 1st 2018')
+        //https://docs.cypress.io/guides/core-concepts/conditional-testing.html#Server-side-rendering
         rp.workoutDetailsH1().should('be.visible').should('have.text', 'Morning in Bushwick')
         rp.workoutDetailsP().should('be.visible').should('have.text', '2 Laps, then a coffeed asdasd asd ')
         rp.workoutTitle().should('be.visible').should('have.text', 'Bushwick Walk Around')
