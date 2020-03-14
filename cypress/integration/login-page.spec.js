@@ -40,7 +40,7 @@ describe('#/login tests', () => {
     
     })
 
-    describe('Login tests', () =>{
+    describe('Functional tests', () =>{
 
     beforeEach(() => {
         lp.visitLoginPage()

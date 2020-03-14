@@ -13,7 +13,8 @@ export class SignUpPage{
     }
 
     emailSignUpField(){
-        return cy.get('.signup-form > [type="text"]')
+        // return cy.get('.signup-form > [type="text"]')
+        return cy.get('.signup-form > :nth-child(3)')
     }
 
     passwordSignUpFieldText(){
@@ -21,8 +22,16 @@ export class SignUpPage{
     }
 
     passwordSignUpField(){
-        return cy.get('.signup-form > [type="password"]')
+        //return cy.get('.signup-form > [type="password"]')
+        return cy.get('.signup-form > :nth-child(6)')
+s
     }
+
+    signUpButton(){
+        return cy.get('.signup-submit-button')
+    }
+
+    // Hide / Show Password
 
     showPasswordLink(){
         return cy.get('.password')
@@ -31,5 +40,14 @@ export class SignUpPage{
     hidePasswordLink(){
         return cy.get('.text')
     }
+
+    // Error Locators
+
+    emailInvalidError(){
+        return cy.get('.email-error')
+    }
     
+    passwordInvalidError(){
+        return cy.get('.password-error')
+    }
 }
