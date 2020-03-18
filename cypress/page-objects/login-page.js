@@ -2,14 +2,15 @@ export class LoginPage {
     
     visitLoginPage(){
         cy.viewport(1440,900)
-        cy.visit('https://muuv.herokuapp.com/#/login')        
+        cy.clearCookies()
+        cy.visit('/login')        
     }
 
     loginAsDemoUser(){
         cy.viewport(1440,900)
-        cy.visit('https://muuv.herokuapp.com/#/login')        
-        cy.get('.demo-button', {timeout: 3000}).click()
         cy.clearCookies()
+        cy.visit('/login')        
+        cy.get('.demo-button', {timeout: 3000}).click()
     }
 
     muuvHeaderLogo(){
