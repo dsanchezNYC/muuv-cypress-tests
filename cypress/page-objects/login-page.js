@@ -12,7 +12,7 @@ export class LoginPage {
         cy.visit('/login')        
         cy.get('.demo-button', {timeout: 3000}).click()
     }
-
+// test 
     muuvHeaderLogo(){
         return cy.get('h1')
     }
